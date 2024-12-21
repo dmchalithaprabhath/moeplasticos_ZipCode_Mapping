@@ -25,7 +25,7 @@ all_point_file = "./data/geojson/All_Zip_Points.geojson"
 
 base_excel_file = "./data/excel/New_ZipCode_NoDuplicates.xlsx"
 # Now using CSV for chapter data:
-chapter_csv_file = "./data/excel/CHAPTERMEMBERS_Updated_CSV.xlsx"
+chapter_csv_file = "./data/excel/CHAPTERMEMBERS_Updated_CSV.csv"
 
 # Read base data as Excel (unchanged):
 df_base = pd.read_excel(base_excel_file, dtype=str)
