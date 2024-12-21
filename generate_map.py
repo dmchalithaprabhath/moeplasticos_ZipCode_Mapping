@@ -24,10 +24,13 @@ all_polygon_file = "./data/geojson/All_Zip_Polygons.geojson"
 all_point_file = "./data/geojson/All_Zip_Points.geojson"
 
 base_excel_file = "./data/excel/New_ZipCode_NoDuplicates.xlsx"
-chapter_excel_file = "./data/excel/CHAPTERMEMBERS_Updated.xlsx"
+# Now using CSV for chapter data:
+chapter_csv_file = "./data/excel/CHAPTERMEMBERS_Updated_CSV.xlsx"
 
+# Read base data as Excel (unchanged):
 df_base = pd.read_excel(base_excel_file, dtype=str)
-df_chapter = pd.read_excel(chapter_excel_file, dtype=str)
+# Read chapter data as CSV:
+df_chapter = pd.read_csv(chapter_csv_file, dtype=str)
 
 with open(all_polygon_file, 'r') as f:
     polygons_data = json.load(f)
